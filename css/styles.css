@@ -1,0 +1,214 @@
+/* GENERAL */
+/* general font size and colors applied to the entire document */
+
+html {
+    font-size: 16px;
+    color: #26004b;
+    min-width: 375px;
+}
+
+/* general alignment applied to entire content */
+body {
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    background: url(/images/wallpaper.jpg);
+}
+
+/* HEADER LOGO */
+/* sizing, positioning and wobbling animation for logo in header */
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 10rem;
+    height: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    float: left;
+    animation: moody 5s infinite;
+}
+
+/* wobbling animation for logo with increments specifying angles */
+@keyframes moody {
+    0% {transform: rotate(0deg);}
+  25% {transform: rotate(5deg);}
+  50% {transform: rotate(-20deg);}
+  75% {transform: rotate(15deg);}
+  100% {transform: rotate(0deg);}
+}
+
+
+/* NAVIGATION BAR */
+/* sizing and alignment for navigation links */
+
+.navigation-bar {
+    justify-content: space-between;
+    height: 8rem;
+    font-size: .6rem;
+    margin-bottom: 1.2rem;
+}
+
+.navigation-bar i {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    padding-left: 2.5rem;  
+}
+
+.navigation-bar i:hover {
+    transform: scale(1.5);
+}
+
+/* stacks nav links horizontally and sizes them */
+.navigation-bar li {
+    display: inline-block;
+    margin-top: 3rem;
+    margin-right: 1.2rem;
+
+}
+
+nav a:link, nav a:visited {
+    text-decoration: none;
+    color: #26004b;
+}
+
+.navigation-bar li:hover {
+    transform: scale(1.5)
+}
+
+/* font and alignment for all headings */
+h2, h3 {
+    font-family: 'Comforter Brush', cursive;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+/* layout for menu icons which specifies grid layout and spacing */
+.scoops {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4 , .1fr);
+    grid-template-rows: repeat(4 , .1fr);
+    grid-gap: .3rem;
+    margin-bottom: 1.2rem;
+}
+
+/* image source for menu icons and sizing of same */
+.menu {
+    background-image: url(/images/scoop_small.png);
+    width: 3.7rem;
+    height: 3.7rem;
+}
+
+/* image source of menu icon when mouse hovers over it */
+.menu:hover {
+    width: 3.7rem;
+    height: 3.7rem;
+    background-image: url(/images/scoop_small_hover.png);
+    transform: scale(1.2)
+}
+
+/* image for detailed description of menu item with sizing */
+section img{
+width: 300px;
+height: auto;
+margin-left: 35px;
+margin-right: 35px;
+}
+
+/* sizing and formatting for plus and minus icons for adding items to cart */
+section i {
+font-size: 2rem;
+padding: 1rem;
+}
+
+section i:hover {
+    transform: scale(1.5)
+}
+
+footer {
+    background-color: #26004b;
+    height: 1.2rem;
+    color: white;
+}
+
+.tile {
+    padding-bottom: 1rem;
+}
+
+input[type=text] {
+    width: 85%;
+}
+
+/* specifies sizing of fields to be entered in the contact page */
+textarea {
+    width: 85%;
+    height: 8rem;
+}
+
+.form {
+    padding-bottom: 1.5rem;
+}
+
+/* MEDIA QUERY FOR LARGER SCREENS */
+
+@media screen and (min-width: 760px) {
+    /* specifies maximum extent of content when resized */
+    body {
+        max-width: 1200px;
+    }
+
+    /* specifies reference unit font size for rem for larger screens */
+    html {
+        font-size: 22px;
+    }
+
+    /* optimized menu icon images for larger screen */
+    .menu {
+        background-image: url(/images/scoop_mid.png);
+    }
+
+    .menu:hover {
+        background-image: url(/images/scoop_mid_hover.png);
+    }
+
+    /* rearranged page content layout for larger screen */
+    .scoops {
+        float: left;
+        margin: 1rem;
+
+    }
+
+    .detail {
+        margin: 1rem;
+    }
+
+    footer {
+        margin-top: 2rem;
+    }
+
+    .menu_heading {
+        text-align: left;
+        margin-left: 1rem;
+    }
+
+    /* shifts and resizes nav links for larger screen */
+    .navigation-bar {
+        /* width: 100%; */
+        text-align: right;
+        margin-right: 1rem;
+        height: 8rem;
+        font-size: .6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    /* rearranged page content layout for larger screen */
+    .tile {
+        display: grid;
+        padding: 3rem;
+        max-width: 300px;
+        display:inline-block;  
+    }
+}
